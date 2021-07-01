@@ -26,71 +26,148 @@ html {
   font-size: 15px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  text-align: center;
-}
-
 p {
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
   line-height: 1.5;
+}
+
+h1,
+h2,
+h4 {
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.wrapper-inner {
   text-align: center;
 }
 
-.info-number h2,
-.info-number h5 {
-  text-transform: uppercase;
+@media only screen and (min-width: 376px) {
+  .wrapper-inner {
+    text-align: left;
+  }
 }
 
-.info-number h5 {
-  text-transform: uppercase;
-  font-weight: 400;
-}
 /*------------------------------------------
 --------------- Layout ---------------
 ------------------------------------------*/
-.wrapper {
-  width: 90vw;
-  margin: 2rem auto;
-  border-radius: 0.75rem;
+.card {
+  width: 326px;
+  margin: 4rem auto;
+
+  border-radius: 1rem;
 }
 
-.main-image {
+.image {
   width: 100%;
-  height: 16rem;
-  border-radius: 0.75rem 0.75rem 0 0;
+  height: 240px;
+  background-color: lightgreen;
+
+  position: relative;
+
+  border-radius: 1rem 1rem 0 0;
 }
 
-.main-image p {
-  display: none;
+.image .overlay {
+  width: 100%;
+  height: inherit;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  border-radius: inherit;
 }
 
-.main-info {
+.image img {
+  width: 100%;
+  height: inherit;
+
+  border-radius: inherit;
+}
+
+.info {
+  padding-bottom: 2rem;
+}
+
+.wrapper-inner {
   width: 90%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
-.main-info h1 {
-  padding-top: 3rem;
+h1 {
+  margin-bottom: 1rem;
 }
 
-.main-info p {
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-}
-.info-number {
-  padding-bottom: 3rem;
+.stats {
+  margin-top: 2rem;
 }
 
-.info-number-block {
-  padding-bottom: 1.5rem;
+.stats div {
+  margin-top: 1.5rem;
 }
+
+.stats div h2 {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 376px) {
+
+  .card {
+    width: 1110px;
+    height: 446px;
+
+    display: flex;
+
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .image {
+    flex-basis: 540px;
+    height: 100%;
+    order: 2;
+
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  .info {
+    flex-basis: 570px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .wrapper-inner {
+    width: 80%;
+  }
+
+  .info .stats {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .info .stats div {
+    width: 30%;
+  }
+}
+
+
 /*------------------------------------------
 --------------- Color ---------------
 ------------------------------------------*/
@@ -98,40 +175,33 @@ body {
   background-color: hsl(233, 47%, 7%);
 }
 
-.wrapper {
-  background-color: hsl(244, 38%, 16%);
-}
-
-.main-image {
-    background-color: hsl(277, 64%, 61%);
-}
-
-.main-info h1,
-.main-info .info-number .info-number-block h2 {
+h1,
+h2 {
   color: hsl(0, 0%, 100%);
 }
 
-.main-info h1 span {
+.accent {
   color: hsl(277, 64%, 61%);
 }
 
-.main-info .info-number .info-number-block h5 {
+h4 {
   color: hsla(0, 0%, 100%, 0.6);
 }
 
-.main-info p {
+p {
   color: hsla(0, 0%, 100%, 0.75);
 }
+
+.card {
+  background-color: hsl(244, 38%, 16%);
+}
+
+.image .overlay {
+  background-color: hsl(277, 64%, 61%);
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
 /*------------------------------------------
 --------------- Background Image ---------------
 ------------------------------------------*/
-.main-image {
-  background:
-  linear-gradient(
-    hsla(277, 64%, 61%,.7),
-    hsla(277, 64%, 61%,.7)
-    ),
-  url('./images/image-header-mobile.jpg') no-repeat;
-  background-size: 100%;
-  background-blend-mode: multiply;
-}

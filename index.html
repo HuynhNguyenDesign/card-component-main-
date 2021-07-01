@@ -5,47 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Frontend Mentor | Stats preview card component</title>
   <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+  <!-- <style>
+    div {
+      border: 1px solid red;
+    }
+  </style> -->
 </head>
 <body>
-  <!-- Outer wrapper -->
-  <div class="wrapper">
-    <!-- Hero Image -->
-    <div class="main-image">
-      <p>The eam in a metting</p>
+
+  <div class="card">
+
+    <div class="image">
+      <div class="overlay"></div>
+      <img    src="images/image-header-mobile.jpg"
+              srcset="images/image-header-mobile.jpg 654w,
+                      images/image-header-desktop.jpg 540w"
+              alt="Our Team">
     </div>
-    <!-- Main Info -->
-    <div class="main-info">
-      <!-- Main header -->
-      <h1>Get <span>insights</span> that help your business grow.</h1>
-      <!-- Introduction paragraph -->
-      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
-      experience, and overall efficiency.</p>
-      <!-- Numbers -->
-      <div class="info-number">
-        <!-- Comapnies -->
-        <div class="info-number-block companies">
-          <h2>10k+</h2>
-          <h5>companies</h5>
-        </div>
-        <!-- Templates -->
-        <div class="info-number-block templates">
-          <h2>314</h2>
-          <h5>templates</h5>
-        </div>
-        <!-- Querries -->
-        <div class="info-number-block queries">
-          <h2>12m+</h2>
-          <h5>queries</h5>
+
+    <div class="info">
+      <div class="wrapper-inner">
+        <h1>Get <span class="accent">insights</span> that help your business grow.</h1>
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.</p>
+        <div class="stats">
+          <div class="stats-companies">
+            <h2>10k+</h2>
+            <h4>companies</h4>
+          </div>
+          <div class="stats-templates">
+            <h2>314</h2>
+            <h4>templates</h4>
+          </div>
+          <div class="stats-querries">
+            <h2>12m+</h2>
+            <h4>queries</h4>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </body>
 </html>
